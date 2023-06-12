@@ -2,8 +2,11 @@
 
 Play remotely from your mobile.
 
+[Youtube demo](https://www.youtube.com/watch?v=xePYvEX66po)
+
 (NOTE: Mobile and PC/Mac/Linux computer must share same wifi conneciton)  
 (NOTE: This project is under development and in a very early stage, it means it can change along the time)  
+
 ![Pad 3](/docs/images/5.jpg)
 
 ## Requirements
