@@ -2,7 +2,7 @@
 
 Play remotely from your mobile.
 
-(NOTE: Mobile and PC/Mac/Linux computer must share same wifi conneciton)
+(NOTE: Mobile and PC/Mac/Linux computer must share same wifi conneciton)  
 (NOTE: This project is under development and in a very early stage, it means it can change along the time)  
 ![Pad 3](/docs/images/5.jpg)
 
