@@ -1,0 +1,174 @@
+:root {
+  --c-primary: #000;
+  --c-primary-50: #1a1a1a;
+  --c-primary-100: #333333;
+  --c-primary-200: #4d4d4d;
+  --c-primary-300: #666666;
+  --c-primary-400: #808080;
+  --c-primary-500: #999999;
+  --c-primary-600: #b3b3b3;
+  --c-primary-700: #cccccc;
+  --c-primary-800: #e6e6e6;
+  --c-primary-900: #fff;
+
+  --c-secondary: #0d4d5f;
+  --c-secondary-50: #255f6f;
+  --c-secondary-100: #3d717f;
+  --c-secondary-200: #56828f;
+  --c-secondary-300: #6e949f;
+  --c-secondary-400: #86a6af;
+  --c-secondary-500: #9eb8bf;
+  --c-secondary-600: #b6cacf;
+  --c-secondary-700: #cfdbdf;
+  --c-secondary-800: #e7edef;
+  --c-secondary-900: #ffffff;
+}
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+  touch-action: manipulation;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background: var(--c-secondary);
+  color: var(--c-primary-800);
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pad-header-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.pad-layouts-container {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.pad-container {
+  position: absolute;
+  width: 100%;
+  max-height: 260px;
+  bottom: 0;
+  height: 100%;
+}
+
+.pad-left-container {
+  position: absolute;
+  width: 100%;
+  max-height: 160px;
+  max-width: 160px;
+  width: 100%;
+  left: 20px;
+  bottom: 20px;
+  height: 100%;
+}
+
+.pad-right-container {
+  position: absolute;
+  width: 100%;
+  max-height: 160px;
+  max-width: 160px;
+  width: 100%;
+  height: 100%;
+  bottom: 20px;
+  right: 20px;
+}
+
+.button {
+  border: 0;
+  background: var(--c-primary-800);
+  color: var(--c-secondary);
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  touch-action: manipulation;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.button:active, .button:hover {
+  background: var(--c-primary-700);
+}
+
+.button-small {
+  border-radius: 20px;
+  background: var(--c-primary-800);
+  color: var(--c-secondary);
+  border: 0;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  touch-action: manipulation;
+}
+
+.button-small:active, .button-small:hover {
+  background: var(--c-primary-700);
+}
+
+.square {
+  border-radius: 6px;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0%, -50%);
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

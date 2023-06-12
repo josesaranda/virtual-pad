@@ -1,0 +1,20 @@
+.OverlayMessage {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background: var(--c-secondary);
+  display: none;
+  font-size: 26px;
+}
+
+// galaxy fold width
+@media (max-width: 652px) {
+  .OverlayMessage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+  }
+}
