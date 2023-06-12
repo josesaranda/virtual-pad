@@ -13,7 +13,7 @@ Play remotely from your mobile.
 
 ## Installation
 
-1. Clone the repository `git clone blablabla`.
+1. Clone the repository `git clone https://github.com/josesaranda/virtual-pad`.
 2. Run `npm install` in the root of the project.
 3. Run `npm start` in the root of the project.
 
