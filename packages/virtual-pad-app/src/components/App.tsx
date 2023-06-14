@@ -42,7 +42,7 @@ export const App: React.FC<any> = () => {
       },
       { passive: false }
     );
-  }, []);
+  });
 
   const emitClick = (keyPressed: string, type: "down" | "up") => {
     socket.emit("key", [keyPressed, type]);
