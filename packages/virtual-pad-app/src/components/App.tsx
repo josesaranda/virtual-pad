@@ -1,14 +1,16 @@
+import { useVersion } from "@virtual-pad-app/hooks/useVersion";
 import React, { useEffect, useState } from "react";
 import "../styles/main.scss";
 import { OverlayMessage } from "./OverlayMessage/OverlayMessage";
 import { Pad1 } from "./Pad1";
 import { Pad2 } from "./Pad2";
 import { Pad3 } from "./Pad3";
-import { Status } from "./Status/Status";
+import { StatusBar } from "./StatusBar/StatusBar";
 
 export const App: React.FC<any> = () => {
   const [pad, setPad] = useState(0);
   const [isConnected, setIsConnected] = useState(false);
+  const version = useVersion();
   let socket: any;
 
   useEffect(() => {
@@ -40,7 +42,7 @@ export const App: React.FC<any> = () => {
       },
       { passive: false }
     );
-  });
+  }, []);
 
   const emitClick = (keyPressed: string, type: "down" | "up") => {
     socket.emit("key", [keyPressed, type]);
@@ -49,7 +51,7 @@ export const App: React.FC<any> = () => {
   return (
     <main>
       <OverlayMessage></OverlayMessage>
-      <Status isConnected={isConnected}></Status>
+      <StatusBar isConnected={isConnected} version={version}></StatusBar>
       <div className="pad-container">
         <div className="pad-header-container">Virtual Pad</div>
         <div className="pad-layouts-container">
