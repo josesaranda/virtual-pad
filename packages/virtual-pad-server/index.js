@@ -11,6 +11,11 @@ const io = new Server(server);
 
 const os = require("os");
 
+const version = require("child_process")
+  .execSync("git rev-parse --short HEAD")
+  .toString()
+  .trim();
+
 const interfaces = os.networkInterfaces();
 const addresses = [];
 
@@ -21,6 +26,10 @@ for (const name in interfaces) {
     }
   }
 }
+
+app.get("/api/version", (_, res) => {
+  res.send({ version });
+});
 
 const virtualPadAppPath = path.join(
   __dirname,
@@ -48,7 +57,10 @@ function startServer(port) {
   server.listen(port, () => {
     console.log(`listening on http://localhost:${port}`);
     console.log(`listening on http://${addresses[0]}:${port}`);
-    console.log("");
+    console.log(
+      "Version:",
+      `https://github.com/josesaranda/virtual-pad/commit/${version}`
+    );
     console.log("--- Scan this QR Code ---");
     console.log("");
     qrcode.generate(`http://${addresses[0]}:${port}`, { small: true });

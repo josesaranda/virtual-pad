@@ -5,7 +5,7 @@ Play remotely from your mobile.
 [Youtube demo](https://www.youtube.com/watch?v=xePYvEX66po)
 
 (NOTE: Mobile and PC/Mac/Linux computer must share same wifi conneciton)  
-(NOTE: This project is under development and in a very early stage, it means it can change along the time)  
+(NOTE: This project is under development and in a very early stage, it means it can change along the time)
 
 ![Pad 3](/docs/images/5.jpg)
 
@@ -16,9 +16,47 @@ Play remotely from your mobile.
 
 ## Installation
 
-1. Clone the repository `git clone https://github.com/josesaranda/virtual-pad`.
-2. Run `npm install` in the root of the project.
-3. Run `npm start` in the root of the project.
+1. Clone the repository
+
+```
+  git clone https://github.com/josesaranda/virtual-pad
+```
+
+2. Go inside folder.
+```
+  cd virtual-pad
+```
+3. See documentation for your OS (macos, linux, windows)
+
+Please ensure you have the required dependencies before installing:
+
+### Installation Windows
+
+windows-build-tools npm package (`npm install --global --production windows-build-tools` from an elevated PowerShell or CMD.exe)
+
+```shell
+  npm install --global --production windows-build-tools
+  npm install
+  npm start
+```
+
+### Installation Mac
+
+Xcode Command Line Tools is needed.
+
+```shell
+  xcode-select --install
+  npm install
+  npm start
+```
+
+### Installation Linux
+
+```
+  sudo apt-get install libxtst-dev
+  npm install
+  npm start
+```
 
 ## Usage
 

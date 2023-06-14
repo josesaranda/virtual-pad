@@ -1,0 +1,38 @@
+.StatusBar {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  font-size: 12px;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .version, .version:visited, .version:hover, .version:focus {
+    color: white;
+    text-decoration: none;
+  }
+
+  .status {
+    .connected {
+      background: rgb(36, 130, 5);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .disconnected {
+      background: rgb(177, 6, 6);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 6px;
+    }
+  }
+}
