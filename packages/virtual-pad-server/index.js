@@ -38,7 +38,7 @@ const virtualPadAppPath = path.join(
 
 app.use(express.static(virtualPadAppPath));
 
-app.get("/", (_, res) => {
+app.get("*", (_, res) => {
   res.sendFile(virtualPadAppPath + "/index.html");
 });
 

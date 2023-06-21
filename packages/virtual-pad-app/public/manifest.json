@@ -1,9 +1,9 @@
 {
+  "start_url": ".",
   "short_name": "Virtual Pad",
   "name": "Virtual Pad",
   "orientation": "landscape",
   "icons": [],
-  "start_url": "/?source=pwa",
   "background_color": "#0d4d5f",
   "display": "standalone",
   "scope": "/",

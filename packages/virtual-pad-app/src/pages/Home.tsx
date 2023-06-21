@@ -1,38 +1,19 @@
-import { useVersion } from "@virtual-pad-app/hooks/useVersion";
 import React, { useEffect, useState } from "react";
-import "../styles/main.scss";
-import { OverlayMessage } from "./OverlayMessage/OverlayMessage";
-import { Pad1 } from "./Pad1";
-import { Pad2 } from "./Pad2";
-import { Pad3 } from "./Pad3";
-import { StatusBar } from "./StatusBar/StatusBar";
+import { OverlayMessage } from "../components/OverlayMessage/OverlayMessage";
+import { Pad1 } from "../components/Pad1";
+import { Pad2 } from "../components/Pad2";
+import { Pad3 } from "../components/Pad3";
+import { StatusBar } from "../components/StatusBar/StatusBar";
+import { useSocket } from "../hooks/useSocket";
+import { useVersion } from "../hooks/useVersion";
+import "./Home.scss";
 
-export const App: React.FC<any> = () => {
+export const Home: React.FC<any> = () => {
   const [pad, setPad] = useState(0);
-  const [isConnected, setIsConnected] = useState(false);
+  const { isConnected, emitClick } = useSocket();
   const version = useVersion();
-  let socket: any;
 
   useEffect(() => {
-    if (typeof io === "function") {
-      socket = io();
-
-      socket.on("connect_error", (error: any) => {
-        console.log(error);
-        setIsConnected(false);
-      });
-
-      socket.on("connect", () => {
-        console.log("connected");
-        setIsConnected(true);
-      });
-
-      socket.on("disconnect", () => {
-        console.log("disconnected");
-        setIsConnected(false);
-      });
-    }
-
     document.addEventListener(
       "touchmove",
       (event: any) => {
@@ -43,10 +24,6 @@ export const App: React.FC<any> = () => {
       { passive: false }
     );
   });
-
-  const emitClick = (keyPressed: string, type: "down" | "up") => {
-    socket.emit("key", [keyPressed, type]);
-  };
 
   return (
     <main>
