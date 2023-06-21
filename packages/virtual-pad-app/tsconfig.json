@@ -1,27 +1,21 @@
 {
-  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "react",
-    // Enable top-level await, and other modern ESM features
     "target": "ESNext",
-    "module": "ESNext",
-    // Enable node-style module resolution, for things like npm package imports
-    "moduleResolution": "node",
-    // Enable JSON imports
-    "resolveJsonModule": true,
-    // Enable stricter transpilation for better output
-    "isolatedModules": true,
-    // Astro directly run TypeScript code, no transpilation needed
-    "noEmit": true,
-    // Report an error when importing a file using a casing different from the casing on disk
-    "forceConsistentCasingInFileNames": true,
-    // Properly support importing CJS modules in ESM
-    "esModuleInterop": true,
-    // Skip typechecking libraries and .d.ts files
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
     "skipLibCheck": true,
-    // Enable strict mode
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    // Error when a value import is only used as a type
-    "verbatimModuleSyntax": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

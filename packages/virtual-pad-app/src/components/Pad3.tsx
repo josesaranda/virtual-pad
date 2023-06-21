@@ -1,5 +1,5 @@
-import type { Pad } from "@virtual-pad-app/models/Pad";
 import React from "react";
+import type { Pad } from "../models/Pad";
 
 export const Pad3: React.FC<Pad> = ({ onPadKey }: Pad) => {
   return (
